@@ -77,4 +77,60 @@ containerMovements.innerHTML='';
 
 }
 
-displayMovements(account1.movements);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+//Adding display balance (reduce function)
+
+const displayBalance = function(mov){
+  const balance = mov.reduce((acc,cur) => acc+cur,0);
+  labelBalance.textContent =`${balance}€`;
+}
+
+
+const displaySummary = function(acc){
+  const balance_in =acc.movements.filter(mov => mov >0).reduce((acc,mov)=> acc+mov,0);
+  labelSumIn.textContent =`${balance_in}€`;
+
+  const balance_out=acc.movements.filter(mov => mov <0).reduce((acc,mov)=> acc+mov,0);
+  labelSumOut.textContent=`${Math.abs(balance_out)}€`;
+
+  const interest=acc.movements.filter(mov => mov>0).map(mov => mov*acc.interestRate/100).filter(int => int > 1).reduce((acc,int)=> acc+int,0);
+  labelSumInterest.textContent=`${interest}€`;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//creating user names
+const createUserNames = function(accs){
+  accs.forEach(function(acc){
+     acc.username = acc.owner.toLowerCase().split(' ').map(name => name[0]).join('');
+  });
+  // console.log(username);
+  // return username;
+}
+
+const user= "Sara Ali Khan";
+createUserNames(accounts);
+// console.log(accounts);
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//implementing login
+let currentAccount;
+
+btnLogin.addEventListener('click',function(e){
+  e.preventDefault();
+  // console.log("login");
+  currentAccount=accounts.find(acc => acc.username === inputLoginUsername.value);
+  console.log(currentAccount);
+  
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    console.log("success");
+    containerApp.style.opacity =100;
+    labelWelcome.textContent=`Welcome back, ${currentAccount.owner.split(' ')[0]}`;
+//clear input fields
+inputLoginUsername.value=inputLoginPin.value ='';
+inputLoginPin.blur();
+    displayMovements(currentAccount.movements);
+    displayBalance(currentAccount.movements);
+    displaySummary(currentAccount);
+
+  }
+});
