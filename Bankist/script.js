@@ -81,9 +81,10 @@ containerMovements.innerHTML='';
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 //Adding display balance (reduce function)
 
-const displayBalance = function(mov){
-  const balance = mov.reduce((acc,cur) => acc+cur,0);
-  labelBalance.textContent =`${balance}€`;
+const displayBalance = function(acc){
+  acc.balance = acc.movements.reduce((acc,cur) => acc+cur,0);
+  labelBalance.textContent =`${acc.balance}€`;
+
 }
 
 
@@ -111,6 +112,14 @@ const createUserNames = function(accs){
 const user= "Sara Ali Khan";
 createUserNames(accounts);
 // console.log(accounts);
+/////////////////////////////////////////////////////////
+// Displaying transfer details
+const updateUI =function(acc){
+  displayMovements(acc.movements);
+  displayBalance(acc);
+  displaySummary(acc);
+
+}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //implementing login
 let currentAccount;
@@ -128,9 +137,25 @@ btnLogin.addEventListener('click',function(e){
 //clear input fields
 inputLoginUsername.value=inputLoginPin.value ='';
 inputLoginPin.blur();
-    displayMovements(currentAccount.movements);
-    displayBalance(currentAccount.movements);
-    displaySummary(currentAccount);
 
+updateUI(currentAccount);
   }
+});
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Implementing Transfers
+btnTransfer.addEventListener('click',function(e){
+  e.preventDefault();
+  const amount = Number(inputTransferAmount.value);
+  // console.log(amount);
+  const receiverAccount =accounts.find(acc => acc.username === inputTransferTo.value);
+  // console.log(receiverAccount);
+  if (amount >0 && receiverAccount && currentAccount.balance >= amount && receiverAccount?.username !== currentAccount.username) {
+    console.log("Transfer valid");
+    currentAccount.movements.push(-amount);
+    receiverAccount.movements.push(amount);
+    updateUI(currentAccount);
+  }
+
+inputTransferAmount.value = inputTransferTo.value='';
+inputTransferAmount.blur();
 });
