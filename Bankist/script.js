@@ -62,9 +62,12 @@ const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
 
-const displayMovements=function (movements) {
-containerMovements.innerHTML='';
-  movements.forEach(function(mov,i) {
+const displayMovements=function (movements,sort = false) {
+  //for sorting
+  containerMovements.innerHTML='';
+  const movs=sort ? movements.slice().sort((a,b) => a-b) : movements;
+  ////////////////////////////////////////////
+  movs.forEach(function(mov,i) {
     const type= mov>0? 'deposit' : 'withdrawal';
 
     const html =`<div class="movements__row">
@@ -158,4 +161,44 @@ btnTransfer.addEventListener('click',function(e){
 
 inputTransferAmount.value = inputTransferTo.value='';
 inputTransferAmount.blur();
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Delete account
+
+btnClose.addEventListener('click',function(e){
+  e.preventDefault();
+  // console.log("delete");
+  if (currentAccount.username === inputCloseUsername.value && currentAccount.pin === Number(inputClosePin.value)){
+    const index = accounts.findIndex(acc => acc.username === currentAccount.username);
+    // console.log(index);
+    // Dlete account
+    accounts.splice(index,1);
+    // console.log(accounts);
+    // hide UI
+    containerApp.style.opacity =0;
+  }
+  inputCloseUsername.value=inputClosePin.value='';
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Loan functionality
+btnLoan.addEventListener('click', function (e) {
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
+    console.log(amount);
+    currentAccount.movements.push(amount);
+    updateUI(currentAccount);
+    console.log(currentAccount.movements);
+  }
+  inputLoanAmount.value='';
+});
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Sort functionality
+let sorted=false;
+btnSort.addEventListener('click',function(e){
+  e.preventDefault();
+  displayMovements(currentAccount.movements,!sorted);
+  sorted =!sorted;
 });
