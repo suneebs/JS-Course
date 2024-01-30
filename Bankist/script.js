@@ -72,7 +72,7 @@ const displayMovements=function (movements,sort = false) {
 
     const html =`<div class="movements__row">
     <div class="movements__type movements__type--${type}">${i+1} ${type}</div>
-    <div class="movements__value">${Math.abs(mov)}€</div>
+    <div class="movements__value">${mov.toFixed(2)}€</div>
     </div>`;
 
     containerMovements.insertAdjacentHTML('afterbegin',html);
@@ -86,20 +86,20 @@ const displayMovements=function (movements,sort = false) {
 
 const displayBalance = function(acc){
   acc.balance = acc.movements.reduce((acc,cur) => acc+cur,0);
-  labelBalance.textContent =`${acc.balance}€`;
+  labelBalance.textContent =`${acc.balance.toFixed(2)}€`;
 
 }
 
 
 const displaySummary = function(acc){
   const balance_in =acc.movements.filter(mov => mov >0).reduce((acc,mov)=> acc+mov,0);
-  labelSumIn.textContent =`${balance_in}€`;
+  labelSumIn.textContent =`${balance_in.toFixed(2)}€`;
 
   const balance_out=acc.movements.filter(mov => mov <0).reduce((acc,mov)=> acc+mov,0);
-  labelSumOut.textContent=`${Math.abs(balance_out)}€`;
+  labelSumOut.textContent=`${Math.abs(balance_out).toFixed(2)}€`;
 
   const interest=acc.movements.filter(mov => mov>0).map(mov => mov*acc.interestRate/100).filter(int => int > 1).reduce((acc,int)=> acc+int,0);
-  labelSumInterest.textContent=`${interest}€`;
+  labelSumInterest.textContent=`${interest.toFixed(2)}€`;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -185,7 +185,7 @@ btnClose.addEventListener('click',function(e){
 //Loan functionality
 btnLoan.addEventListener('click', function (e) {
   e.preventDefault();
-  const amount = Number(inputLoanAmount.value);
+  const amount =Math.floor(inputLoanAmount.value);
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     console.log(amount);
     currentAccount.movements.push(amount);
@@ -202,3 +202,24 @@ btnSort.addEventListener('click',function(e){
   displayMovements(currentAccount.movements,!sorted);
   sorted =!sorted;
 });
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Learning - array.from method
+
+// const movementsUI =Array.from(document.querySelectorAll('.movements__value'));
+// console.log(movementsUI);
+
+labelBalance.addEventListener('click',function(){
+  const movementsUI =Array.from(document.querySelectorAll('.movements__value'),
+  el => Number(el.textContent.replace('€','')));
+  console.log(movementsUI);
+  
+  const movementsUI2 =[...document.querySelectorAll('.movements__value')];
+  console.log(movementsUI2.map(el => el.textContent));
+})
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Design for movements
+btnLogin.addEventListener('click',function(){
+  [...document.querySelectorAll('.movements__row')].forEach(function(row,i){
+    if (i%2 === 0) row.style.backgroundColor="lightgrey"
+  })
+})
