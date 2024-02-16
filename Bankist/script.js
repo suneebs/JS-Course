@@ -102,6 +102,12 @@ const formatMovementDate = function(date,locale){
   return Intl.DateTimeFormat(locale).format(date);
 
 }
+const formatCur=function(value,locale,cur){
+  return new Intl.NumberFormat(locale,{
+    style:'currency',
+    currency:cur,
+  }).format(value)
+}
 
 
 const displayMovements=function (acc,sort = false) {
@@ -115,10 +121,12 @@ const displayMovements=function (acc,sort = false) {
     const date = new Date(acc.movementsDates[i]);
     const displayDate=formatMovementDate(date,acc.locale);
 
+    const formattedMov=formatCur(mov,acc.locale,acc.currency);
+
     const html =`<div class="movements__row">
     <div class="movements__type movements__type--${type}">${i+1} ${type}</div>
     <div class="movements__date">${displayDate}</div>
-    <div class="movements__value">${mov.toFixed(2)}€</div>
+    <div class="movements__value">${formattedMov}</div>
     </div>`;
 
     containerMovements.insertAdjacentHTML('afterbegin',html);
@@ -132,20 +140,20 @@ const displayMovements=function (acc,sort = false) {
 
 const displayBalance = function(acc){
   acc.balance = acc.movements.reduce((acc,cur) => acc+cur,0);
-  labelBalance.textContent =`${acc.balance.toFixed(2)}€`;
+  labelBalance.textContent =`${formatCur(acc.balance,acc.locale,acc.currency)}`;
 
 }
 
 
 const displaySummary = function(acc){
   const balance_in =acc.movements.filter(mov => mov >0).reduce((acc,mov)=> acc+mov,0);
-  labelSumIn.textContent =`${balance_in.toFixed(2)}€`;
+  labelSumIn.textContent =`${formatCur(balance_in,acc.locale,acc.currency)}`;
 
   const balance_out=acc.movements.filter(mov => mov <0).reduce((acc,mov)=> acc+mov,0);
-  labelSumOut.textContent=`${Math.abs(balance_out).toFixed(2)}€`;
+  labelSumOut.textContent=`${formatCur(Math.abs(balance_out),acc.locale,acc.currency)}`;
 
   const interest=acc.movements.filter(mov => mov>0).map(mov => mov*acc.interestRate/100).filter(int => int > 1).reduce((acc,int)=> acc+int,0);
-  labelSumInterest.textContent=`${interest.toFixed(2)}€`;
+  labelSumInterest.textContent=`${formatCur(interest,acc.locale,acc.currency)}`;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -268,12 +276,13 @@ btnLoan.addEventListener('click', function (e) {
   const amount =Math.floor(inputLoanAmount.value);
   if (amount > 0 && currentAccount.movements.some(mov => mov >= amount * 0.1)) {
     console.log(amount);
-    currentAccount.movements.push(amount);
+    setTimeout( function(){ currentAccount.movements.push(amount);
      //add loan date
      currentAccount.movementsDates.push(new Date().toISOString());
 
     updateUI(currentAccount);
     console.log(currentAccount.movements);
+    },2000);
   }
   inputLoanAmount.value='';
   [...document.querySelectorAll('.movements__row')].forEach(function(row,i){
