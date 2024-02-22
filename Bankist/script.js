@@ -176,15 +176,39 @@ const updateUI =function(acc){
   displayBalance(acc);
   displaySummary(acc);
 
-}
+};
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //implementing login
-let currentAccount;
+let currentAccount,timer;
 ////////////////////////////////////////////////////////////////////////////////////
 //fake logged in
 // currentAccount=account1;
 // updateUI(currentAccount);
 // containerApp.style.opacity = 100;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Timer
+
+
+
+const logoutTimer = function(){
+  
+  const tick= function(){
+    const min =String(Math.trunc(time/60)).padStart(2,0);
+      const sec=String((time%60)).padStart(2 ,0);
+      labelTimer.textContent =`${min}:${sec}`;
+     
+      if (time ==0) {
+        clearInterval(timer);
+        labelWelcome.textContent='Log in to get started';
+        containerApp.style.opacity =0;
+      }
+      time--;
+  }
+  let time =120;
+  tick();
+  const timer= setInterval(tick,1000);
+  return timer;
+}
 
 
 
@@ -222,7 +246,11 @@ labelDate.textContent=new Intl.DateTimeFormat(currentAccount.locale,options).for
 inputLoginUsername.value=inputLoginPin.value ='';
 inputLoginPin.blur();
 
+//timer
+if(timer) clearInterval(timer);
+timer=logoutTimer();
 updateUI(currentAccount);
+
   }
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -242,6 +270,11 @@ btnTransfer.addEventListener('click',function(e){
     currentAccount.movementsDates.push(new Date().toISOString());
     receiverAccount.movementsDates.push(new Date().toISOString());
     updateUI(currentAccount);
+
+    //reset timer
+    clearInterval(timer);
+    timer=logoutTimer();
+
     [...document.querySelectorAll('.movements__row')].forEach(function(row,i){
       if (i%2 === 0) row.style.backgroundColor="lightgrey"
     })
@@ -282,6 +315,9 @@ btnLoan.addEventListener('click', function (e) {
 
     updateUI(currentAccount);
     console.log(currentAccount.movements);
+    //reset timer
+    clearInterval(timer);
+    timer=logoutTimer();
     },2000);
   }
   inputLoanAmount.value='';
