@@ -31,3 +31,20 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+// adding cookie
+const header =document.querySelector('.header');
+
+const message = document.createElement('div');
+message.classList.add('cookie-test-msg');
+message.innerHTML = 'We use cookies for improved functionality and analytics <button class ="btn btn--close--cookie"> got it!</button>';
+header.append(message);
+
+document.querySelector('.btn--close--cookie')
+.addEventListener('click',function(){
+  message.remove();
+});
+
+console.log(getComputedStyle(message).height);
+message.style.height=Number.parseFloat(getComputedStyle(message).height,10)+30+'px';
+message.style.backgroundColor='#37383d';
+document.documentElement.style.setProperty('--color-primary','orangered');
