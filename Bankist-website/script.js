@@ -47,4 +47,11 @@ document.querySelector('.btn--close--cookie')
 console.log(getComputedStyle(message).height);
 message.style.height=Number.parseFloat(getComputedStyle(message).height,10)+30+'px';
 message.style.backgroundColor='#37383d';
-document.documentElement.style.setProperty('--color-primary','orangered');
+// document.documentElement.style.setProperty('--color-primary','orangered');
+
+//smooth scrolling
+const btnScrollTo = document.querySelector(".btn--scroll-to");
+const section1= document.querySelector('#section--1');
+btnScrollTo.addEventListener('click',function(){
+  section1.scrollIntoView({behavior:'smooth'});
+});
