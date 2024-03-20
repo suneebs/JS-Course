@@ -55,3 +55,23 @@ const section1= document.querySelector('#section--1');
 btnScrollTo.addEventListener('click',function(){
   section1.scrollIntoView({behavior:'smooth'});
 });
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Page Navigation
+
+// document.querySelectorAll(".nav__link").forEach(function(el){
+//   el.addEventListener('click',function(e){
+//     e.preventDefault();
+//     console.log("clicked");
+//     const id= this.getAttribute('href');
+//     document.querySelector(id).scrollIntoView({behavior:'smooth'});
+//   })
+// })
+
+// using event delegation for increased performance
+document.querySelector('.nav__links').addEventListener('click',function(e){
+  e.preventDefault();
+  if(e.target.classList.contains('nav__link')){
+        const id= e.target.getAttribute('href');
+        document.querySelector(id).scrollIntoView({behavior:'smooth'}); 
+  }
+})
