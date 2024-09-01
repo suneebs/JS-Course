@@ -244,7 +244,30 @@ class App{
         }
 
         form.insertAdjacentHTML('afterend',html);
+
+        // Add event listener to the newly added close button
+        this._attachCloseButtonListener(workout.id);
     }
+    _attachCloseButtonListener(workoutID) {
+        const closeButton = document.querySelector(`.workout[data-id="${workoutID}"] .closeX`);
+        if (closeButton) {
+            closeButton.addEventListener('click', () => {
+                // Find the workout element to remove
+                const workoutItem = document.querySelector(`.workout[data-id="${workoutID}"]`);
+                if (workoutItem) workoutItem.remove();
+    
+                // Remove the workout from the workouts array
+                this.#workouts = this.#workouts.filter(workout => workout.id !== workoutID);
+    
+                // Update local storage
+                this._setLocalStorage();
+    
+                // Optionally, you can reload the page to reflect changes, though it's usually better to avoid this
+                location.reload();
+            });
+        }
+    }
+    
 
     _moveToPopup(e){
         const workoutEl = e.target.closest('.workout');
