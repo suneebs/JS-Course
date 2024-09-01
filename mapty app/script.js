@@ -205,12 +205,16 @@ class App{
           
           <div class="workout__details">
             <span class="workout__icon">${workout.type === 'running' ? '🏃‍♂️' : '🚴‍♂️'}</span>
-            <span class="workout__value">${workout.distance}</span>
+            <span class="workout__value">
+            <input class='inputs' type='text' value=${workout.distance} />
+            </span>
             <span class="workout__unit">km</span>
           </div>
           <div class="workout__details">
             <span class="workout__icon">⏱</span>
-            <span class="workout__value">${workout.duration}</span>
+            <span class="workout__value">
+            <input class='inputs' type='text' value=${workout.duration} />
+            </span>
             <span class="workout__unit">min</span>
           </div>`
 
@@ -218,12 +222,16 @@ class App{
             html += `
             <div class="workout__details">
             <span class="workout__icon">⚡️</span>
-            <span class="workout__value">${workout.pace.toFixed(1)}</span>
+            <span class="workout__value">
+            ${workout.pace.toFixed(1)}
+            </span>
             <span class="workout__unit">min/km</span>
           </div>
           <div class="workout__details">
             <span class="workout__icon">🦶🏼</span>
-            <span class="workout__value">${workout.cadence}</span>
+            <span class="workout__value">
+            <input class='inputs' type='text' value=${workout.cadence} />
+            </span>
             <span class="workout__unit">spm</span>
           </div>
             `;
@@ -232,12 +240,16 @@ class App{
             html += `
             <div class="workout__details">
             <span class="workout__icon">⚡️</span>
-            <span class="workout__value">${workout.speed.toFixed(1)}</span>
+            <span class="workout__value">
+            ${workout.speed.toFixed(1)}
+            </span>
             <span class="workout__unit">km/h</span>
           </div>
           <div class="workout__details">
             <span class="workout__icon">⛰</span>
-            <span class="workout__value">${workout.elevationGain}</span>
+            <span class="workout__value">
+            <input class='inputs' type='text' value=${workout.elevationGain} />
+            </span>
             <span class="workout__unit">m</span>
           </div>
             `;
@@ -247,6 +259,9 @@ class App{
 
         // Add event listener to the newly added close button
         this._attachCloseButtonListener(workout.id);
+
+        // Add event listener to the newly added input fields
+        this._attachInputListeners(workout.id);
     }
     _attachCloseButtonListener(workoutID) {
         const closeButton = document.querySelector(`.workout[data-id="${workoutID}"] .closeX`);
@@ -266,6 +281,54 @@ class App{
                 location.reload();
             });
         }
+    }
+
+    _attachInputListeners(workoutId){
+        const updateWorkout = document.querySelector(`.workout[data-id="${workoutId}"]`);
+        if (updateWorkout) {
+            const inputs = updateWorkout.querySelectorAll('.inputs');
+            inputs.forEach(inp =>{
+                inp.addEventListener('input',(e) => {
+                    this._updateWorkout(workoutId,e.target);
+                })
+            })
+        }
+        updateWorkout.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+              location.reload();
+            }
+          });
+        
+    }
+
+    _updateWorkout(workoutId,event){
+        const workoutIndex = this.#workouts.findIndex(workout => workout.id === workoutId);
+        // console.log(workoutIndex);
+        if (workoutIndex > -1) {
+            const workout = this.#workouts[workoutIndex];
+            // console.log(workout);
+            // console.log(event);
+            if (event.classList.contains('inputs')) {
+
+                const unit = event.parentElement.nextElementSibling.textContent;
+                if (unit === 'km'){
+                    // console.log(input.value);
+                    workout.distance = +event.value;
+                }
+                else if (unit === 'min')
+                    workout.duration = +event.value;
+                else if (unit === 'spm')
+                    workout.cadence = +event.value;
+                else if (unit === 'm')
+                    workout.elevationGain = +event.value;
+                }
+
+                if(workout.type === 'cycling')
+                    workout.speed = workout.distance / (workout.duration / 60);
+                else if(workout.type === 'running')
+                    workout.pace = workout.duration / workout.distance;
+        }  
+        this._setLocalStorage();
     }
     
 
