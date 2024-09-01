@@ -200,7 +200,7 @@ class App{
         <li class="workout workout--${workout.type}" data-id="${workout.id}">
           <h2 class="workout__title">${workout.description}
           
-          <img class="dot dotBtn" src = "dots.png" height="20px" width="20px" class="dot"></img>
+          <button class="closeX">X</button>
           </h2>
           
           <div class="workout__details">

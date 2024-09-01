@@ -219,16 +219,24 @@ a:visited {
   border-left: 5px solid var(--color-brand--1);
 }
 
-.dot{
-  margin-left: 140px;
-  
-}
-@media only screen and (max-width: 600px) {
-  .dot {
-    margin-left: 120px;
-  }
-}
 
+.closeX{
+  background:none;
+  border: none;
+  flex: auto;
+  color: white;
+  margin-left: 130px;
+}
+.closeX:hover{
+  cursor: pointer;
+  color: #e77070;
+}
+@media only screen and (max-width:767px)
+{
+      .closeX{
+             margin-left: 110px;
+      }
+}
 .delete{
   font-weight: bold;
   width: 60px;
