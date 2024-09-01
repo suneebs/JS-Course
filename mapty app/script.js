@@ -64,12 +64,14 @@ const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
 const delbtn = document.querySelector('.delete');
+const sortBtn = document.querySelector('.sort');
 
 class App{
     #map;
     #mapEvent;
     #workouts = [];
     #mapZoomLevel = 13;
+    #sortOrder = 'ascending'
     constructor(){
         this._getPosition();
 
@@ -82,6 +84,8 @@ class App{
         this._getLocalStorage();
         // delete data
         delbtn.addEventListener('click',this._delData);
+        // sort workouts
+        sortBtn.addEventListener('click',this._sortdata.bind(this));
     }
 
     _getPosition(){
@@ -195,6 +199,34 @@ class App{
             .openPopup();
     }
 
+    _renderWorkout() {
+        // console.log(containerWorkouts.childNodes);
+        const childToKeep = containerWorkouts.children[0];
+        // console.log("child: ",childToKeep);
+        let children = Array.from(containerWorkouts.children);
+        
+        children.forEach(function(child) {
+            if (child !== childToKeep) {
+                containerWorkouts.removeChild(child);
+            }
+        });
+        
+        // containerWorkouts.innerHTML = '';
+
+        // console.log(this.#workouts);
+        // console.log(this.#workouts);
+        
+        let work = [...this.#workouts].reverse();
+            work.sort((a, b) => {
+                // const comparison = new Date(a.date) - new Date(b.date);
+                return this.#sortOrder === 'ascending' ? -1 : 1;
+            }).forEach(workout => this._renderWorkouts(workout));
+        
+        // work.forEach(w =>  this._renderWorkouts(w));   
+
+
+    }
+    
     _renderWorkouts(workout){
         let html = `
         <li class="workout workout--${workout.type}" data-id="${workout.id}">
@@ -374,6 +406,12 @@ class App{
         location.reload();
     }
 
+    _sortdata(){
+
+        this.#sortOrder = this.#sortOrder === 'ascending' ? 'descending' : 'ascending';
+        this._renderWorkout(); // Re-render the workouts in the new order    
+        
+    }
 }
 
 const app = new App();
