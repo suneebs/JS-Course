@@ -620,13 +620,10 @@ const controlRecipe = async function() {
     }
 };
 //////////////////////////////////////////////////////////////////
-//300 listening for load and hashchange events
-// window.addEventListener('hashchange', showRecipe);
-const array = [
-    'hashchange',
-    'load'
-];
-array.forEach((ev)=>window.addEventListener(ev, controlRecipe));
+const init = function() {
+    (0, _recipeViewDefault.default).addHandlerRender(controlRecipe);
+};
+init();
 
 },{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./model":"Y4A21","./views/recipeView":"l60JC"}],"49tUX":[function(require,module,exports,__globalThis) {
 'use strict';
@@ -2564,7 +2561,7 @@ const getJSON = async function(url) {
     }
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","regenerator-runtime":"dXNgZ","./config":"k5Hzs"}],"l60JC":[function(require,module,exports,__globalThis) {
+},{"regenerator-runtime":"dXNgZ","./config":"k5Hzs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l60JC":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2
@@ -2593,6 +2590,13 @@ class RecipeView {
         this.#parentElement.innerHTML = '';
         this.#parentElement.insertAdjacentHTML('afterbegin', markup);
     };
+    addHandlerRender(handler) {
+        const array = [
+            'hashchange',
+            'load'
+        ];
+        array.forEach((ev)=>window.addEventListener(ev, handler));
+    }
     #generateMarkup() {
         return `
     <figure class="recipe__fig">
