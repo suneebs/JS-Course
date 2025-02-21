@@ -300,6 +300,7 @@ btnClose.addEventListener('click',function(e){
     containerApp.style.opacity =0;
   }
   inputCloseUsername.value=inputClosePin.value='';
+  labelWelcome.textContent='Log in to get started';
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -321,9 +322,12 @@ btnLoan.addEventListener('click', function (e) {
     },2000);
   }
   inputLoanAmount.value='';
-  [...document.querySelectorAll('.movements__row')].forEach(function(row,i){
-    if (i%2 === 0) row.style.backgroundColor="lightgrey"
-  })
+  setTimeout( function(){
+    [...document.querySelectorAll('.movements__row')].forEach(function(row,i){
+      if (i%2 === 0) row.style.backgroundColor="lightgrey"
+    })
+
+  },2000)
 });
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Sort functionality
