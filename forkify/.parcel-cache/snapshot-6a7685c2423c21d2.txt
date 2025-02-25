@@ -1,4 +1,4 @@
-8561
+8562
 164C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\posthtml\node_modules\domutils\lib\traversal.d.ts.map133826962582809399 0
 154C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\array\virtual\unique-by.js133827031581067196 0
 180C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\posthtml\node_modules\entities\lib\generated\decode-data-xml.d.ts.map133826962582707689 0
@@ -12,7 +12,7 @@
 144C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\workers\lib\WorkerFarm.js133826962594891851 0
 143C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\instance\un-this.js133827031580866457 0
 109C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\.prettierrc133342173352812218 0
-118C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js\controller.js133828903821752697 0
+118C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js\controller.js133849351186241724 0
 125C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\domelementtype133826962577933473 1
 145C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\stable\typed-array\find.js133827031513756237 0
 148C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\string\virtual\anchor.js133827031473572223 0
@@ -44,7 +44,7 @@
 149C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\array\virtual\group-by.js133827031521608122 0
 139C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\sass\types\value\string.d.ts133826966171053795 0
 131C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\ordered-binary\.idea133826962582108860 1
-102C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist133828905979754244 1
+102C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist133849357120377079 1
 145C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\type-fest\ts41\delimiter-case.d.ts133826962580612519 0
 144C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@swc\helpers\cjs\_await_value.cjs133826962580919869 0
 126C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\forkify-flowchart-part-2.png133342173353706295 0
@@ -81,7 +81,7 @@
 132C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\instance133827031585299209 1
 123C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\sass\_components.scss133342173356198828 0
 160C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\modules\es.aggregate-error.constructor.js133827031491029206 0
-108C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\index.html133827397364905721 0
+108C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\index.html133848499363337304 0
 153C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\caniuse-lite\data\features\cryptography.js133826962599975400 0
 128C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\sass\sass.dart.js133826966167805840 0
 172C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\test\fixtures\invalid-target-source-not-file\src133826962597792066 1
@@ -128,7 +128,7 @@
 143C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\date\to-json.js133827031570921216 0
 135C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\set\join.js133827031539041138 0
 183C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\posthtml\node_modules\dom-serializer\node_modules\entities\lib\decode.js133826962571434233 0
-104C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js133827847183517852 1
+104C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js133848498063917842 1
 137C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\function-bind\CHANGELOG.md133827023646353028 0
 106C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\sass133826956912281140 1
 130C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\stable\json133827031574885893 1
@@ -171,7 +171,7 @@
 119C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\sass\_recipe.scss133342173356838730 0
 130C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\semver\package.json133826962594352801 0
 167C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@swc\helpers\esm\_class_static_private_field_spec_set.js133826962599995380 0
-120C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\logo.726d37a8.png133828905979306078 0
+120C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\logo.726d37a8.png133849351181306277 0
 142C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\caniuse-lite\data\regions\NC.js133826962654106212 0
 168C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@swc\helpers\src\_create_for_of_iterator_helper_loose.mjs133826962615059035 0
 145C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\proposals\map-upsert-v4.js133827031542222172 0
@@ -203,7 +203,7 @@
 125C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\hasown\LICENSE133827023645508130 0
 161C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\async-disposable-stack\constructor.js133827031484410915 0
 142C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\caniuse-lite\data\regions\GI.js133826962640201463 0
-113C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js\model.js133828901732921905 0
+113C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js\model.js133848516265699255 0
 141C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\string\italics.js133827031535812146 0
 148C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\actual\instance\to-spliced.js133827031573609930 0
 152C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\typed-array\filter-reject.js133827031510600875 0
@@ -221,7 +221,7 @@
 152C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\number\to-exponential.js133827031569564163 0
 157C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\test\fixtures\application-targets133826962604161985 1
 146C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\stable\reflect\construct.js133827031483585214 0
-110C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js\views133827847183517852 1
+110C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js\views133848522247921202 1
 138C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\utils\src\config.js133826962580431282 0
 150C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\actual\async-iterator\reduce.js133827031552169645 0
 150C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\actual\array\group-by-to-map.js133827031520984428 0
@@ -247,7 +247,16 @@
 176C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\package-manager\test\fixtures\packages\peers\package.json133826962593071194 0
 138C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\bundler-default\src133826962572177446 1
 141C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\instance\group.js133827031522251889 0
-124C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js\views\recipeView.js133828906407648184 0
+124C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js\views\recipeView.js133849356532523361 0
+137C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\domutils\lib\esm\legacy.js133826962578367288 0
+127C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\lmdb\src\dbi.cpp133826962598335182 0
+137C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\stable\unescape.js133827031580951717 0
+147C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\modules\esnext.array.with.js133827031503118771 0
+136C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\semver\functions\parse.js133826962586834683 0
+164C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\proposals\accessible-object-hasownproperty.js133827031472785924 0
+135C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\math-intrinsics\isNaN.js133827023645958136 0
+124C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\js\views\searchView.js133849357119148590 0
+139C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\htmlparser2\lib\esm\index.js133826962570078559 0
 143C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\regenerator-runtime\package.json133826962572335535 0
 149C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\internals\safe-get-built-in.js133827031554641342 0
 115C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\src\img\icons.svg133342173355052462 0
@@ -1744,11 +1753,6 @@
 133C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\semver\functions\lt.js133826962584362878 0
 142C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\caniuse-lite\data\regions\MH.js133826962653259609 0
 134C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\semver\functions\lte.js133826962584636991 0
-137C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\domutils\lib\esm\legacy.js133826962578367288 0
-127C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\lmdb\src\dbi.cpp133826962598335182 0
-137C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\stable\unescape.js133827031580951717 0
-147C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\modules\esnext.array.with.js133827031503118771 0
-136C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\semver\functions\parse.js133826962586834683 0
 136C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\node-addon-api\LICENSE.md133826962583834668 0
 148C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\utils\test\objectHash.test.js133826962595800954 0
 148C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\modules\esnext.array.group.js133827031502948761 0
@@ -2610,9 +2614,6 @@
 141C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\htmlparser2\lib\esm\index.d.ts133826962586600540 0
 144C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\date\get-year.js133827031520598271 0
 137C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\math-intrinsics\isNaN.d.ts133827023647339184 0
-164C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\proposals\accessible-object-hasownproperty.js133827031472785924 0
-135C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\math-intrinsics\isNaN.js133827023645958136 0
-139C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\htmlparser2\lib\esm\index.js133826962570078559 0
 136C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\weak-map133827031581731771 1
 149C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\transformer-sass\src\legacy.js133826966171103856 0
 146C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\math-intrinsics\isNegativeZero.d.ts133827023647359147 0
@@ -2633,8 +2634,8 @@
 135C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\math-intrinsics\pow.d.ts133827023647479198 0
 133C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\math-intrinsics\pow.js133827023647039248 0
 142C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\call-bind-apply-helpers\LICENSE133827023645518120 0
-156C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\typed-array\float32-array.js133827031514925307 0
 137C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\math-intrinsics\round.d.ts133827023647499164 0
+156C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\typed-array\float32-array.js133827031514925307 0
 136C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\chokidar\esm\package.json133826966166042724 0
 135C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\math-intrinsics\round.js133827023647109178 0
 147C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\modules\esnext.map.upsert.js133827031505484591 0
@@ -4869,7 +4870,7 @@
 134C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\browserslist\error.d.ts133826962579628605 0
 157C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\modules\es.typed-array.uint32-array.js133827031501858250 0
 145C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\typed-array\of.js133827031547843218 0
-125C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.f7626f62.css.map133828905979690576 0
+125C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.f7626f62.css.map133849351181401889 0
 139C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\full\object\index.js133827031528705753 0
 164C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\modules\es.typed-array.uint8-clamped-array.js133827031501908196 0
 149C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\modules\es.typed-array.with.js133827031501924195 0
@@ -6043,7 +6044,6 @@
 140C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\math\log2.js133827031541419982 0
 139C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\es\instance\slice.js133827031559202697 0
 143C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\math\radians.js133827031551032772 0
-141C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\src\buildCache.js133826962588663301 0
 146C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@lmdb\lmdb-win32-x64\node.napi.node133826962586464964 0
 141C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\math\scale.js133827031554808307 0
 140C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\core-js\features\math\sign.js133827031558888478 0
@@ -8318,6 +8318,7 @@
 181C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\test\fixtures\config-extends-not-found\.parcelrc-multiple133826962582527026 0
 164C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\test\fixtures\config\subfolder\.parcelrc133826962580627612 0
 170C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\test\fixtures\application-targets\package.json133826962604173614 0
+141C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\src\buildCache.js133826962588663301 0
 142C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\src\BundleGraph.js133826962593890345 0
 145C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\src\CommittedAsset.js133826962595730950 0
 141C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\@parcel\core\src\Dependency.js133826962596614265 0
@@ -8551,12 +8552,12 @@
 124C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\.bin\uuid.ps1133826962044142392 0
 121C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\.bin\which133826962044112438 0
 125C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\node_modules\.bin\which.cmd133826962044112438 0
-123C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\favicon.8b2f57bf.png133828905979754244 0
+123C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\favicon.8b2f57bf.png133849351181534864 0
 122C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\forkify.3464ddca.js133826966218743846 0
-121C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\icons.21bad73c.svg133828905979730810 0
-121C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\icons.dfd7a6db.svg133828905979470557 0
+121C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\icons.21bad73c.svg133849351181534864 0
+121C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\icons.dfd7a6db.svg133849351181260232 0
 124C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.62406edb.js.map133826966218895579 0
-120C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.e37f48ea.js133828905979754244 0
-124C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.e37f48ea.js.map133828905979754244 0
-121C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.f7626f62.css133828905979470557 0
-113C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.html133828903998627561 0
+120C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.e37f48ea.js133849357120294493 0
+124C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.e37f48ea.js.map133849357120377079 0
+121C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.f7626f62.css133849351181296168 0
+113C:\udemy_JS\complete-javascript-course-master\complete-javascript-course-master\Learnings\forkify\dist\index.html133848514011544258 0
