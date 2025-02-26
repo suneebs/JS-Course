@@ -1,12 +1,14 @@
 import { async } from 'regenerator-runtime';
-import { API_URL } from './config';
+import { API_URL, PAGE_PER_SEARCH } from './config';
 import { getJSON } from './helpers';
 
 export const state ={
     recipe:{},
     search:{
         query:'',
-        results:[]
+        results:[],
+        page:1,
+        page_per_search : PAGE_PER_SEARCH,
     }
 };
 
@@ -52,4 +54,11 @@ export const loadSearchResults = async function(query){
         console.error(`${err} 💥💥💥`);
         throw err;
     }
+}
+
+export const getSearchResultsPage = function(page = state.search.page) {
+    state.search.page=page;
+    const start = (page-1)* state.search.page_per_search;
+    const end = page *  state.search.page_per_search;
+    return state.search.results.slice(start, end);
 }
